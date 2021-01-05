@@ -23,19 +23,33 @@ include "..\inc\Header.php";
                 <div class="col-lg-6 offset-lg-3">
                     <div class="register-form">
                         <h2>Register</h2>
-                        <form action="#">
+                        <form action="inc/forms.php" method="post">
                             <div class="group-input">
-                                <label for="username">Username or email address *</label>
-                                <input type="text" id="username">
+                                <label for="first">First Name *</label>
+                                <input type="text" id="first" name="first">
+                            </div>
+                            <div class="group-input">
+                                <label for="last">Last Name *</label>
+                                <input type="text" id="last" name="last">
+                            </div>
+                            <div class="group-input">
+                                <label for="birthdate"> Date of birth *</label>
+                                <input type="date" id="birthdate" name="birthdate">
+                            </div>
+                            <div class="group-input">
+                                <label for="number"> Number*</label>
+                                <input type="number" id="number" name="number">
+                            </div>
+                            <div class="group-input">
+                                <label for="username">Username *</label>
+                                <input type="text" id="username" name="username">
                             </div>
                             <div class="group-input">
                                 <label for="pass">Password *</label>
-                                <input type="text" id="pass">
+                                <input type="text" id="pass" name="pass">
                             </div>
-                            <div class="group-input">
-                                <label for="con-pass">Confirm Password *</label>
-                                <input type="text" id="con-pass">
-                            </div>
+
+                            <input type="hidden" name="form" value="register">
                             <button type="submit" class="site-btn register-btn">REGISTER</button>
                         </form>
                         <div class="switch-login">

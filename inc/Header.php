@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="zxx">
+<?php
+session_start();
+include "../inc/Fonction.php";
+if(isset($_SESSION["uname"])){
 
+}else {
+    echo '<meta http-equiv="refresh" content="0;URL=../front/login.php">';
+
+}
+$f=new Fonction();
+$u=$f->getclient($_SESSION["uname"]);
+foreach ($u as $t)
+{
+?>
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Fashi Template">
     <meta name="keywords" content="Fashi, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Fashi | Template</title>
+    <title>Drawe <?php echo $t["uname"] ?></title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
@@ -33,27 +46,23 @@
 <!-- Header Section Begin -->
 <header class="header-section">
     <div class="header-top">
+
         <div class="container">
             <div class="ht-left">
                 <div class="mail-service">
                     <i class=" fa fa-envelope"></i>
-                    hello.colorlib@gmail.com
+                    youssef.tfifha@esprit.tn
                 </div>
                 <div class="phone-service">
                     <i class=" fa fa-phone"></i>
-                    +65 11.188.888
+                    +216 20.245.989
                 </div>
+
             </div>
+
             <div class="ht-right">
-                <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
-                <div class="lan-selector">
-                    <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                        <option value='yt' data-image="img/flag-1.jpg" data-imagecss="flag yt"
-                                data-title="English">English</option>
-                        <option value='yu' data-image="img/flag-2.jpg" data-imagecss="flag yu"
-                                data-title="Bangladesh">German </option>
-                    </select>
-                </div>
+
+
                 <div class="top-social">
                     <a href="#"><i class="ti-facebook"></i></a>
                     <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -68,8 +77,8 @@
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="logo">
-                        <a href="index.php">
-                            <img src="img/logo.png" alt="">
+                        <a href="../front/index.php">
+                            <img src="../front/img/favicon.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -144,26 +153,11 @@
     </div>
     <div class="nav-item">
         <div class="container">
-            <div class="nav-depart">
-                <div class="depart-btn">
-                    <i class="ti-menu"></i>
-                    <span>All departments</span>
-                    <ul class="depart-hover">
-                        <li class="active"><a href="#">Women’s Clothing</a></li>
-                        <li><a href="#">Men’s Clothing</a></li>
-                        <li><a href="#">Underwear</a></li>
-                        <li><a href="#">Kid's Clothing</a></li>
-                        <li><a href="#">Brand Fashion</a></li>
-                        <li><a href="#">Accessories/Shoes</a></li>
-                        <li><a href="#">Luxury Brands</a></li>
-                        <li><a href="#">Brand Outdoor Apparel</a></li>
-                    </ul>
-                </div>
-            </div>
+
             <nav class="nav-menu mobile-menu">
                 <ul>
-                    <li class="active"><a href="index.php">Home</a></li>
-                    <li><a href="shop.php">Shop</a></li>
+                    <li class="active"><a href="../front/index.php">Home</a></li>
+                    <li><a href="../front/shop.php">Shop</a></li>
                     <li><a href="#">Collection</a>
                         <ul class="dropdown">
                             <li><a href="#">Men's</a></li>
@@ -171,16 +165,50 @@
                             <li><a href="#">Kid's</a></li>
                         </ul>
                     </li>
-                    <li><a href="blog.php">Blog</a></li>
-                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="../front/blog.php">Blog</a></li>
+                    <li><a href="../front/contact.php">Contact</a></li>
                     <li><a href="#">Pages</a>
                         <ul class="dropdown">
-                            <li><a href="blog-details.php">Blog Details</a></li>
-                            <li><a href="shopping-cart.php">Shopping Cart</a></li>
-                            <li><a href="check-out.php">Checkout</a></li>
-                            <li><a href="faq.php">Faq</a></li>
-                            <li><a href="register.php">Register</a></li>
-                            <li><a href="login.php">Login</a></li>
+                            <li><a href="../front/blog-details.php">Blog Details</a></li>
+                            <li><a href="../front/shopping-cart.php">Shopping Cart</a></li>
+                            <li><a href="../front/check-out.php">Checkout</a></li>
+                            <li><a href="../front/faq.php">Faq</a></li>
+                            <li><a href="../front/register.php">Register</a></li>
+                            <li><a href="../front/login.php">Login</a></li>
+
+                        </ul>
+                    </li>
+                   <?php if(isset($_SESSION["uname"])){ ?>
+
+                    <li><a href="#">account</a>
+                        <ul class="dropdown">
+                            <li>
+                                <div class="info clearfix">
+                                    <div class="image">
+                                        <a href="#">
+                                            <img src="../front/img/favicon.png" alt="pic" />
+                                        </a>
+                                    </div>
+                                    <div class="content">
+                                        <h5 class="name">
+                                            <a href="#"><?php echo $t["first"].' '.$t["last"]?></a>
+                                        </h5>
+                                        <span class="email"><?php echo $t["email"]?></span>
+                                    </div>
+                                    <div class="account-dropdown__body">
+                                        <div class="account-dropdown__item">
+                                            <a href="#">
+                                                <i class="zmdi zmdi-account"></i>Account</a>
+                                        </div>
+                                    </div>
+                                    <div class="account-dropdown__footer">
+                                        <a href="../front/Logout.php">
+                                            <i class="zmdi zmdi-power"></i>Logout</a>
+                                    </div>
+                                </div>
+                            </li>
+
+<?php } ?>
                         </ul>
                     </li>
                 </ul>
@@ -189,4 +217,8 @@
         </div>
     </div>
 </header>
+
 <!-- Header End -->
+<?php
+}
+?>
