@@ -1,5 +1,5 @@
 <?php
-include "..\inc\Header.php";
+include "inc\Header.php";
 ?>
     <!-- Hero Section Begin -->
     <section class="hero-section">
@@ -535,5 +535,5 @@ include "..\inc\Header.php";
     </div>
     <!-- Partner Logo Section End -->
 <?php
-include "..\inc\Footer.php";
+include "inc\Footer.php";
 ?>

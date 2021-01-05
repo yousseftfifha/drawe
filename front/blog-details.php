@@ -1,5 +1,5 @@
 <?php
-include "..\inc\Header.php";
+include "inc\Header.php";
 ?>
     <!-- Blog Details Section Begin -->
     <section class="blog-details spad">
@@ -167,5 +167,5 @@ include "..\inc\Header.php";
     <!-- Partner Logo Section End -->
 
 <?php
-include "..\inc\Footer.php";
+include "inc\Footer.php";
 ?>

@@ -1,8 +1,8 @@
 <?php
-include "../inc/config.php";
-class Fonction{
+include "config.php";
+class Fonctions{
     public function Logedin($login,$pass){
-        $req="select * from drawe.client where uname='$login' && pass='$pass'";
+        $req="select * from drawe.admin where aname='$login' && pass='$pass'";
         $db=config::getConnexion();
         try {
             $req=$db->query($req);
@@ -12,9 +12,9 @@ class Fonction{
             die('Erreur '.$e->getMessage());
         }
     }
-    public function getclient($uname)
+    public function getadmin($aname)
     {
-        $sql="select * from drawe.client where uname='$uname'";
+        $sql="select * from drawe.admin where aname='$aname'";
         $db = config::getConnexion();
         try
         {

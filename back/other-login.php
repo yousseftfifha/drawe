@@ -48,23 +48,25 @@
 		<div class="container">
 			<div class="row">
 				<div class="module module-login span4 offset4">
-					<form class="form-vertical">
+					<form class="form-vertical"  action="inc/forms.php" method="post">
 						<div class="module-head">
 							<h3>Sign In</h3>
 						</div>
 						<div class="module-body">
 							<div class="control-group">
 								<div class="controls row-fluid">
-									<input class="span12" type="text" id="inputEmail" placeholder="Username">
+									<input class="span12" type="text" id="aname" name="aname" placeholder="aname">
 								</div>
 							</div>
 							<div class="control-group">
 								<div class="controls row-fluid">
-									<input class="span12" type="password" id="inputPassword" placeholder="Password">
+									<input class="span12" type="password" id="pass" name="pass" placeholder="pass">
 								</div>
 							</div>
 						</div>
-						<div class="module-foot">
+                        <input type="hidden" name="form" value="auth1">
+
+                        <div class="module-foot">
 							<div class="control-group">
 								<div class="controls clearfix">
 									<button type="submit" class="btn btn-primary pull-right">Login</button>

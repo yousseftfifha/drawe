@@ -26,21 +26,21 @@ if(isset($_POST["form"])){
                         session_start();
                         $_SESSION["uname"]=$t["uname"];
                         echo '<body onLoad="alert(\'Membre non reconnu...\')">';
-                        header("Location: ../front/index.php");
+                        header("Location: ../../front/index.php");
                     }
                 }
             }
             if ($logedin==false){
                 echo '<body onLoad="alert(\'Membre non reconnu...\')">';
                 // puis on le redirige vers la page d'accueil
-                echo '<meta http-equiv="refresh" content="0;URL=../front/login.php">';
+                echo '<meta http-equiv="refresh" content="0;URL=../../front/login.php">';
             }
         }
         else{
 
            echo '<body onLoad="alert(\'erreur lors de l ajout...\')">';
 
-            echo '<meta http-equiv="refresh" content="1;URL=../front/login.php">';
+            echo '<meta http-equiv="refresh" content="1;URL=../../front/login.php">';
         }
     }
 }

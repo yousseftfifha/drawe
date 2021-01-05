@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION["uname"])) {
-    header("location:../front/index.php");
+    header("location:../../front/index.php");
 }
 ?>
     <!DOCTYPE html>
@@ -33,9 +33,7 @@ if (isset($_SESSION["uname"])) {
 
     <body>
     <!-- Page Preloder -->
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
+
 
     <!-- Header Section Begin -->
     <header class="header-section">
@@ -53,14 +51,7 @@ if (isset($_SESSION["uname"])) {
                 </div>
                 <div class="ht-right">
                     <a href="#" class="login-panel"><i class="fa fa-user"></i>Login</a>
-                    <div class="lan-selector">
-                        <select class="language_drop" name="countries" id="countries" style="width:300px;">
-                            <option value='yt' data-image="img/flag-1.jpg" data-imagecss="flag yt"
-                                    data-title="English">English</option>
-                            <option value='yu' data-image="img/flag-2.jpg" data-imagecss="flag yu"
-                                    data-title="Bangladesh">German </option>
-                        </select>
-                    </div>
+
                     <div class="top-social">
                         <a href="#"><i class="ti-facebook"></i></a>
                         <a href="#"><i class="ti-twitter-alt"></i></a>
@@ -219,7 +210,7 @@ if (isset($_SESSION["uname"])) {
                 <div class="col-lg-6 offset-lg-3">
                     <div class="login-form">
                         <h2>Login</h2>
-                        <form action="../inc/forms.php" method="post">
+                        <form action="inc/forms.php" method="post">
                             <div class="group-input">
                                 <label for="username">Username  *</label>
                                 <input type="text" id="username" name="uname">
@@ -285,5 +276,5 @@ if (isset($_SESSION["uname"])) {
     </div>
     <!-- Partner Logo Section End -->
 <?php
-include "..\inc\Footer.php";
+include "inc\Footer.php";
 ?>

@@ -1,5 +1,5 @@
 <?php
-include "..\inc\Header.php";
+include "inc\Header.php";
 ?>
     <!-- Breadcrumb Section Begin -->
     <div class="breacrumb-section">
@@ -110,5 +110,5 @@ include "..\inc\Header.php";
     </div>
     <!-- Partner Logo Section End -->
 <?php
-include "..\inc\Footer.php";
+include "inc\Footer.php";
 ?>

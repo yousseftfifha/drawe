@@ -2,11 +2,11 @@
 <html lang="zxx">
 <?php
 session_start();
-include "../inc/Fonction.php";
+include "inc/Fonction.php";
 if(isset($_SESSION["uname"])){
 
 }else {
-    echo '<meta http-equiv="refresh" content="0;URL=../front/login.php">';
+    header('Location: ../../drawe/front/login.php');
 
 }
 $f=new Fonction();
@@ -77,8 +77,8 @@ foreach ($u as $t)
             <div class="row">
                 <div class="col-lg-2 col-md-2">
                     <div class="logo">
-                        <a href="../front/index.php">
-                            <img src="../front/img/favicon.png" alt="">
+                        <a href="../index.php">
+                            <img src="../../drawe/front/img/favicon.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -109,7 +109,7 @@ foreach ($u as $t)
                                     <table>
                                         <tbody>
                                         <tr>
-                                            <td class="si-pic"><img src="img/select-product-1.jpg" alt=""></td>
+                                            <td class="si-pic"><img src="../img/select-product-1.jpg" alt=""></td>
                                             <td class="si-text">
                                                 <div class="product-selected">
                                                     <p>$60.00 x 1</p>
@@ -121,7 +121,7 @@ foreach ($u as $t)
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td class="si-pic"><img src="img/select-product-2.jpg" alt=""></td>
+                                            <td class="si-pic"><img src="../img/select-product-2.jpg" alt=""></td>
                                             <td class="si-text">
                                                 <div class="product-selected">
                                                     <p>$60.00 x 1</p>
@@ -156,8 +156,8 @@ foreach ($u as $t)
 
             <nav class="nav-menu mobile-menu">
                 <ul>
-                    <li class="active"><a href="../front/index.php">Home</a></li>
-                    <li><a href="../front/shop.php">Shop</a></li>
+                    <li class="active"><a href="../../drawe/front/index.php">Home</a></li>
+                    <li><a href="../../drawe/front/shop.php">Shop</a></li>
                     <li><a href="#">Collection</a>
                         <ul class="dropdown">
                             <li><a href="#">Men's</a></li>
@@ -165,16 +165,16 @@ foreach ($u as $t)
                             <li><a href="#">Kid's</a></li>
                         </ul>
                     </li>
-                    <li><a href="../front/blog.php">Blog</a></li>
-                    <li><a href="../front/contact.php">Contact</a></li>
+                    <li><a href="../../drawe/front/blog.php">Blog</a></li>
+                    <li><a href="../../drawe/front/contact.php">Contact</a></li>
                     <li><a href="#">Pages</a>
                         <ul class="dropdown">
-                            <li><a href="../front/blog-details.php">Blog Details</a></li>
-                            <li><a href="../front/shopping-cart.php">Shopping Cart</a></li>
-                            <li><a href="../front/check-out.php">Checkout</a></li>
-                            <li><a href="../front/faq.php">Faq</a></li>
-                            <li><a href="../front/register.php">Register</a></li>
-                            <li><a href="../front/login.php">Login</a></li>
+                            <li><a href="../../drawe/front/blog-details.php">Blog Details</a></li>
+                            <li><a href="../../drawe/front/shopping-cart.php">Shopping Cart</a></li>
+                            <li><a href="../../drawe/front/check-out.php">Checkout</a></li>
+                            <li><a href="../../drawe/front/faq.php">Faq</a></li>
+
+
 
                         </ul>
                     </li>
@@ -186,7 +186,7 @@ foreach ($u as $t)
                                 <div class="info clearfix">
                                     <div class="image">
                                         <a href="#">
-                                            <img src="../front/img/favicon.png" alt="pic" />
+                                            <img src="../../drawe/front/img/favicon.png" alt="pic" />
                                         </a>
                                     </div>
                                     <div class="content">
@@ -202,7 +202,7 @@ foreach ($u as $t)
                                         </div>
                                     </div>
                                     <div class="account-dropdown__footer">
-                                        <a href="../front/Logout.php">
+                                        <a href="../../drawe/front/Logout.php">
                                             <i class="zmdi zmdi-power"></i>Logout</a>
                                     </div>
                                 </div>
